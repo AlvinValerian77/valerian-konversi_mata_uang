@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+
+body { 
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    transition: 0.3s; 
+    background: #f8fafc; 
+}
+
+.dark body { 
+    background: #020617; 
+}
+
+/* Page Animations */
+.page-node { 
+    display: none; 
+}
+
+.page-node.active { 
+    display: block; 
+    animation: pageFade 0.4s ease-out; 
+}
+
+@keyframes pageFade { 
+    from { opacity: 0; transform: translateY(10px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
+
+/* Navigation Styles */
+.nav-item.active { 
+    color: #6366f1; 
+    transform: translateY(-5px); 
+}
+
+.nav-item.active .icon-box { 
+    background: rgba(99, 102, 241, 0.1); 
+    box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.2); 
+}
+
+/* Custom Scrollbar */
+.custom-scroll::-webkit-scrollbar { 
+    width: 4px; 
+}
+
+.custom-scroll::-webkit-scrollbar-thumb { 
+    background: #e2e8f0; 
+    border-radius: 10px; 
+}
+
+/* Dropdown Animation */
+.drop-list { 
+    display: none; 
+}
+
+.drop-list.show { 
+    display: block; 
+    animation: scaleIn 0.2s ease-out; 
+}
+
+@keyframes scaleIn { 
+    from { opacity: 0; transform: scale(0.98); } 
+    to { opacity: 1; transform: scale(1); } 
+}
+
+/* Hide Spinners for Number Input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
